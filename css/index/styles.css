@@ -1,0 +1,208 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/*----------------------------------------------------*/
+
+header {
+  background-color: #a3a3a3;
+  padding: 20px;
+  text-align: center;
+}
+
+header a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+nav {
+  margin-top: 30px;
+}
+
+nav a {
+  margin: 0 30px;
+  text-decoration: none;
+  color: #333;
+}
+
+
+/* In this part I will edit the new header, we will see how it turns out. */
+
+.header-mobile {
+  display: none;
+}
+
+.header-mobile nav ul {
+  display: flex;
+  list-style: none;
+  transition: transform 0.4s ease;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  padding: 1em 0;
+  transform: translateY(-20px);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.header-mobile nav ul.show {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  margin-left: auto;
+  z-index: 101;
+}
+
+/*-----------------------------------*/
+
+main {
+  background: linear-gradient(180deg, #000000, #ffffff, #000000);
+  font-family: 'Arial', sans-serif;
+  z-index: -3;
+}
+
+/*-----------------------------------*/
+
+.section-002 {
+  padding: 40px 5%;
+  margin: 2em 0;
+  background-color: #f4f4f4;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  z-index: 3;
+}
+
+
+.section-002 h2 {
+  font-size: 2.2rem;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.section-002 p {
+  font-size: 1.125rem;
+  color: #424242;
+  line-height: 1.8;
+  text-align: justify;
+  margin-bottom: 1.5em;
+  font-family: 'Roboto', sans-serif;
+}
+
+.section-002 .highlight {
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-left: 4px solid #7f8c8d;
+  margin-top: 20px;
+  border-radius: 6px;
+
+}
+
+.section-002:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+/*-----------------------------------*/
+
+footer {
+  background-color: #111;
+}
+
+.footer-container {
+  width: 100%;
+  padding: 30px 15px 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  padding: 6px;
+  background-color: white;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a i {
+  font-size: 0.9em;
+  color: black;
+  opacity: 0.9;
+}
+
+.social-icons a:hover {
+  background-color: #5c5c5c;
+}
+
+.social-icons a:hover i {
+  color: white;
+}
+
+.footer-nav {
+  margin: 15px 0;
+}
+
+.footer-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  gap: 15px;
+}
+
+.footer-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9em;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+  opacity: 1;
+}
+
+.footer-bottom {
+  background-color: #000;
+  padding: 8px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: white;
+  font-size: 0.8em;
+}
+
+.designer {
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0 5px;
+  font-size: 0.7em;
+}
