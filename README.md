@@ -1,4 +1,4 @@
-#MAGIC X LOGIC
+# MAGIC X LOGIC
 #### ADRIÁN BIENVENIDO MORALES PERDOMO
 
 <h4 align="center">
