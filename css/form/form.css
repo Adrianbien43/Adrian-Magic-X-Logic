@@ -8,9 +8,21 @@ body {
   display: grid;
   min-height: 100vh;
   grid-template-rows: auto 1fr auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 1000px;
+  transform-style: preserve-3d;
 }
 
-/*----------------------------------------------------*/
+/*-----------------------------------*/
+
+main {
+  background: linear-gradient(180deg, #000000, #ffffff, #000000);
+  font-family: 'Arial', sans-serif;
+  z-index: -3;
+}
+
+/*-----------------------------------*/
 
 header {
   background-color: #a3a3a3;
@@ -67,14 +79,7 @@ nav a {
   z-index: 101;
 }
 
-/*-------------------------------------------*/
-
-main {
-  background: linear-gradient(180deg, #000000, #ffffff, #000000);
-  font-family: 'Arial', sans-serif;
-}
-
-/*-------------------------------------------*/
+/*-----------------------------------*/
 
 footer {
   background-color: #111;

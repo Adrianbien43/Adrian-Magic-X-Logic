@@ -92,7 +92,7 @@
     transition: color 0.3s ease;
   }
 
-  .header-mobile a {
+  .header-mobile a h1 {
     color: azure;
     text-decoration: none;
   }
@@ -103,21 +103,13 @@
 
 }
 
-/*----------------------------------------*/
-
-
-@media (max-width:620px) {
-  .carousel-001 {
-    margin: 0% 0% 7% 0%;
-  }
-
-}
 
 /*----------------------------------------*/
+
 
 @media (max-width: 800px) {
   .footer-nav ul {
-    flex-direction: row;
+    flex-direction: column;
     gap: 8px;
   }
 
@@ -126,10 +118,8 @@
     text-align: center;
   }
 
-  .social-icons a i {
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
+  .social-icons a {
+    padding: 5px;
   }
 }
 

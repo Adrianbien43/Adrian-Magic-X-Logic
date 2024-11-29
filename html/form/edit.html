@@ -6,44 +6,113 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M-X-L Editar Formulario</title>
   <link rel="stylesheet" href="../../css/form/styles.css">
+  <link rel="stylesheet" href="../../css/form/form.css">
+  <link rel="stylesheet" href="../../css/form/form1.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
 <body>
-  <div class="form-container">
-    <h1>Editar Formulario</h1>
-    <form id="edit-form">
-      <div class="form-group">
-        <label for="name">Nombre:</label>
-        <input type="text" id="name" name="name">
+
+  <header>
+
+    <div class="heading-title">
+      <a href="../../index.html">
+        <h1>Magic X Logic</h1>
+      </a>
+    </div>
+
+    <nav>
+      <a href="../information/information.html">INFO</a>
+      <a href="../stories/stories.html">HISTORIAS</a>
+      <a href="../characters/characters.html">PERSONAJES</a>
+      <a href="#">AYUDAS</a>
+    </nav>
+
+  </header>
+  <header class="header-mobile">
+    <a href="../../index.html">
+      <h1>M-X-L</h1>
+    </a>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <nav>
+      <ul id="nav-menu">
+        <li><a href="../information/information.html">INFO</a></li>
+        <li><a href="../stories/stories.html">HISTORIAS</a></li>
+        <li><a href="../characters/characters.html">PERSONAJES</a></li>
+        <li><a href="#">AYUDAS</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="form-container">
+      <h1>Editar Formulario</h1>
+      <form id="edit-form">
+        <div class="form-group">
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name">
+        </div>
+        <div class="form-group">
+          <label for="address">Dirección:</label>
+          <input type="text" id="address" name="address">
+        </div>
+        <div class="form-group">
+          <label for="age">Edad:</label>
+          <input type="number" id="age" name="age">
+        </div>
+        <div class="form-group">
+          <label for="chapter">Capítulo:</label>
+          <select id="chapter" name="chapter">
+            <option value="Chapter 1">Capítulo 1</option>
+            <option value="Chapter 2">Capítulo 2</option>
+            <option value="Chapter 3">Capítulo 3</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="country">País:</label>
+          <input type="text" id="country" name="country">
+        </div>
+        <div class="form-group">
+          <label for="comment">Comentario:</label>
+          <textarea id="comment" name="comment"></textarea>
+        </div>
+        <button type="submit">Guardar Cambios</button>
+      </form>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-container">
+      <div class="social-icons">
+        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
       </div>
-      <div class="form-group">
-        <label for="address">Dirección:</label>
-        <input type="text" id="address" name="address">
+      <div class="footer-nav">
+        <ul>
+          <li><a href="">Casa</a></li>
+          <li><a href="">Noticias</a></li>
+          <li><a href="">Contacta</a></li>
+          <li><a href="">Tienda</a></li>
+        </ul>
       </div>
-      <div class="form-group">
-        <label for="age">Edad:</label>
-        <input type="number" id="age" name="age">
-      </div>
-      <div class="form-group">
-        <label for="chapter">Capítulo:</label>
-        <select id="chapter" name="chapter">
-          <option value="Chapter 1">Capítulo 1</option>
-          <option value="Chapter 2">Capítulo 2</option>
-          <option value="Chapter 3">Capítulo 3</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="country">País:</label>
-        <input type="text" id="country" name="country">
-      </div>
-      <div class="form-group">
-        <label for="comment">Comentario:</label>
-        <textarea id="comment" name="comment"></textarea>
-      </div>
-      <button type="submit">Guardar Cambios</button>
-    </form>
-  </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© &copy;2024 M-X-L Todos los derechos reservados<span class="designer">Adrián</span></p>
+    </div>
+  </footer>
+
+  <script src="../../javascript/scripfrontpage.js"></script>
+  <script src="../../javascript/scripdownandup.js"></script>
+  <script src="../../javascript/scriptindex.js"></script>
   <script src="../../javascript/edit.js"></script>
+
 </body>
 
 </html>

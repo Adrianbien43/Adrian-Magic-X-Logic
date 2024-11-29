@@ -1,9 +1,3 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  color: #333;
-}
-
 .form-container {
   width: 80%;
   max-width: 800px;
@@ -19,7 +13,7 @@ h1 {
   color: #444;
 }
 
-a {
+main a {
   text-decoration: none;
   padding: 10px 20px;
   background-color: #4CAF50;
@@ -31,7 +25,7 @@ a {
   margin-top: 20px;
 }
 
-a:hover {
+main a:hover {
   background-color: #45a049;
 }
 
