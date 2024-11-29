@@ -103,32 +103,7 @@
 
 }
 
-/*----------------------------------------*/
-
-@media (max-width: 768px) {
-  .container-2 {
-    width: 150px;
-    height: 200px;
-  }
-
-  .container-2 span {
-    transform: rotateY(calc(var(--i) * 72deg)) translateZ(200px);
-    /* Ajusta la distancia en pantallas medianas */
-  }
-}
-
-@media (max-width: 480px) {
-  .container-2 {
-    width: 100px;
-    height: 250px;
-  }
-
-  .container-2 span {
-    transform: rotateY(calc(var(--i) * 72deg)) translateZ(150px);
-  }
-}
-
-/*----------------------------------------*/
+/*------------------------------------*/
 
 
 @media (max-width: 800px) {
@@ -213,14 +188,5 @@
 
   .designer {
     font-size: 0.5em;
-  }
-}
-
-/*------------------------*/
-
-@media (max-width: 800px) {
-  .the-section-1 {
-    flex-direction: column;
-    margin: 10% 0%;
   }
 }

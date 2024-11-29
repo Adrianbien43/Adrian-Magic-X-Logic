@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>M-X-L Editar Formulario</title>
+  <link rel="stylesheet" href="../../css/form/styles.css">
+</head>
+
+<body>
+  <div class="form-container">
+    <h1>Editar Formulario</h1>
+    <form id="edit-form">
+      <div class="form-group">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div class="form-group">
+        <label for="address">Dirección:</label>
+        <input type="text" id="address" name="address">
+      </div>
+      <div class="form-group">
+        <label for="age">Edad:</label>
+        <input type="number" id="age" name="age">
+      </div>
+      <div class="form-group">
+        <label for="chapter">Capítulo:</label>
+        <select id="chapter" name="chapter">
+          <option value="Chapter 1">Capítulo 1</option>
+          <option value="Chapter 2">Capítulo 2</option>
+          <option value="Chapter 3">Capítulo 3</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="country">País:</label>
+        <input type="text" id="country" name="country">
+      </div>
+      <div class="form-group">
+        <label for="comment">Comentario:</label>
+        <textarea id="comment" name="comment"></textarea>
+      </div>
+      <button type="submit">Guardar Cambios</button>
+    </form>
+  </div>
+  <script src="../../javascript/edit.js"></script>
+</body>
+
+</html>
