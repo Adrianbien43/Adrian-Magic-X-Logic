@@ -71,7 +71,7 @@ Magic X Logic is an ambitious project that aims to create a universe of its own 
 ## EYES:
 This part does not have w3c validation, but it is consented to by me.
 
--------------------------------------------------
+
 .the-section-1 .section-1 .class .box-a img {
   view-timeline-name: --image;
   view-timeline-axis: block;
@@ -80,7 +80,7 @@ This part does not have w3c validation, but it is consented to by me.
   animation-range: entry 25% cover 30%;
   animation-fill-mode: both;
 }
--------------------------------------------------
+
 
 
 #### Libraries used:
