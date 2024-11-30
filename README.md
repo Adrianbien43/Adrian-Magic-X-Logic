@@ -11,11 +11,11 @@
 
 ## Information:📖
 
-#### Project Description:
+#### 📜 Project Description 📜
 
-<p>
+
 Magic X Logic is an ambitious project that aims to create a universe of its own inspired by the structure of Marvel or DC, but with a magical setting. This project will take years to complete. The main idea is to take advantage of all my knowledge to give it visibility and improve its reach, and I think the website will be a key tool to achieve this. My priority is to learn how to develop a high-quality website so that, in the future (hopefully not too far away!), this project can scale significantly.
-</p>
+
 
 <h4 align="center">
 :star2: Información adicional disponible en el proyecto. :star2:
@@ -107,14 +107,16 @@ crossorigin="anonymous" referrerpolicy="no-referrer">
 ## Installation and update:
 
 ### Installation:
-<p>Follow the following instructions to install the project.</p>
+Follow the following instructions to install the project.
 
 - We open the console where you want to download the project.
 - Then we copy the HTTPS url.
 - We use the command: git clone "Next we paste the url that we copied before."
 
 ### Update:
-<p>Follow the following instructions to update the project.</p>
+
+ Follow the following instructions to update the project. 
+
 
 - Remember to update the repositories they have to be inside the project.
 - We use the following commands:
