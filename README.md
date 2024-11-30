@@ -68,7 +68,7 @@ Magic X Logic is an ambitious project that aims to create a universe of its own 
   - view.js
 - index.html
 
-## EYES:
+## :warning: EYES :warning:
 This part does not have w3c validation, but it is consented to by me.
 
 ## Documentation
