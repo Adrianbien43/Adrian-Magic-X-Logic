@@ -117,7 +117,6 @@ Follow the following instructions to install the project.
 
  Follow the following instructions to update the project. 
 
-
 - Remember to update the repositories they have to be inside the project.
 - We use the following commands:
 - git add .
@@ -126,3 +125,9 @@ Follow the following instructions to install the project.
 - You may be asked to configure your user and email, we use the following commands:
 - git config --global user.name "Username"
 - git config --global user.email myemail@gmail.com
+
+## Authors
+
+- [@octokatherine](https://github.com/Adrianbien43)
+
+
