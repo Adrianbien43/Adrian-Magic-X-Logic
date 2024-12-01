@@ -1,4 +1,3 @@
-/* Estilo para la sección con fondo Parallax */
 .section-001 {
   background: url("../../images/ormaments/img-001.jpg") no-repeat center center fixed;
   background-size: cover;
@@ -285,7 +284,7 @@
   border-radius: 8px;
 }
 
-/* Título del formulario */
+
 .container-form .text-center {
   font-size: 24px;
   font-weight: bold;
@@ -294,7 +293,7 @@
   margin-bottom: 20px;
 }
 
-/* Estilo para las etiquetas */
+
 .container-form label {
   font-weight: bold;
   color: #555555;
@@ -302,7 +301,7 @@
   display: block;
 }
 
-/* Estilo para los campos de entrada */
+
 .container-form input {
   width: 100%;
   padding: 10px;
@@ -315,14 +314,14 @@
   transition: border-color 0.3s ease-in-out;
 }
 
-/* Campo de entrada en foco */
+
 .container-form input:focus {
   border-color: #80bdff;
   outline: none;
   box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
 }
 
-/* Botón del formulario */
+
 .container-form button {
   display: block;
   width: 100%;
@@ -338,12 +337,12 @@
   transition: background-color 0.3s ease-in-out;
 }
 
-/* Botón al pasar el cursor */
+
 .container-form button:hover {
   background-color: #6e6e6e;
 }
 
-/* Mensajes de error */
+
 .container-form .text-danger {
   font-size: 14px;
   color: #dc3545;
@@ -352,7 +351,7 @@
   margin-bottom: 10px;
 }
 
-/* Mensaje de error oculto */
+
 .container-form .d-none {
   display: none;
 }

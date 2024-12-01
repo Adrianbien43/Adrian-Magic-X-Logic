@@ -44,12 +44,10 @@ section p {
 
 /*-----------------------------------------------*/
 
-
 ::-webkit-scrollbar {
   width: 0px;
 }
 
-/* Estilo para el progressbar */
 #progressbar {
   position: fixed;
   top: 0;
@@ -58,25 +56,15 @@ section p {
   height: 0%;
   background: linear-gradient(to top,
       #ffffff,
-      /* Blanco brillante */
       #f0f0f0,
-      /* Gris muy claro */
       #dcdcdc,
-      /* Gris claro */
       #c0c0c0,
-      /* Gris medio */
       #a9a9a9,
-      /* Gris oscuro */
       #808080,
-      /* Gris medio oscuro */
       #4f4f4f,
-      /* Gris muy oscuro */
       #333333,
-      /* Gris muy oscuro casi negro */
       #000000);
-  /* Negro brillante */
   border-radius: 10px;
-  /* Bordes redondeados */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   transition: height 0.25s ease-out;
   z-index: 1000;

@@ -10,7 +10,7 @@
 
 h1 {
   text-align: center;
-  color: #444;
+  color: #000;
 }
 
 form {
@@ -20,6 +20,7 @@ form {
 
 label {
   margin: 10px 0 5px;
+  color: #000;
 }
 
 input,
@@ -27,24 +28,26 @@ select,
 textarea {
   padding: 10px;
   margin-bottom: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
   border-radius: 4px;
   font-size: 14px;
   width: 100%;
+  background-color: #fff;
+  color: #000;
 }
 
 button {
   padding: 10px 20px;
   margin-top: 20px;
-  background-color: #4CAF50;
-  color: white;
+  background-color: #000;
+  color: #fff;
   border: none;
   cursor: pointer;
   border-radius: 4px;
 }
 
 button:hover {
-  background-color: #45a049;
+  background-color: #333;
 }
 
 .error-message {
