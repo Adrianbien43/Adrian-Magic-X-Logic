@@ -25,6 +25,8 @@ section {
   box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.3);
   transition: box-shadow 0.3s ease-in-out;
   padding: 10px;
+  position: relative;
+  overflow: hidden;
 }
 
 section h2 {
@@ -38,8 +40,76 @@ section h4 {
 }
 
 section p {
-  margin: 0% 0% 3% 0%;
+  margin: 0% 0% 19% 0%;
   text-align: justify;
+}
+
+/*-----------------------------------------------*/
+
+.container,
+.container1,
+.container2,
+.container3,
+.container4 {
+  width: 130px;
+  height: 130px;
+  transition: transform 0.2s ease;
+  transform: translateY(50px);
+}
+
+.container {
+  background-image: url('../../images/ormaments/mushrooms.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -50px;
+  right: -15px;
+}
+
+.container1 {
+  background-image: url('../../images/ormaments/mushrooms1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -50px;
+  left: -13px;
+}
+
+.container2 {
+  background-image: url('../../images/ormaments/mushrooms2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -65px;
+  left: -15px;
+}
+
+.container3 {
+  background-image: url('../../images/ormaments/mus.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -35px;
+  right: 0;
+}
+
+.container4 {
+  background-image: url('../../images/ormaments/mus1.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+}
+
+.elevate {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /*-----------------------------------------------*/
