@@ -1,58 +1,58 @@
-document.getElementById("user-form").addEventListener("submit", function (event) {
-  event.preventDefault();
+document.getElementById("user-form").addEventListener("submit", function (EVENT) {
+  EVENT.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const address = document.getElementById("address").value;
-  const age = document.getElementById("age").value;
-  const chapter = document.getElementById("chapter").value;
-  const country = document.getElementById("country").value;
-  const comment = document.getElementById("comment").value;
+  const NAME = document.getElementById("name").value;
+  const ADDRESS = document.getElementById("address").value;
+  const AGE = document.getElementById("age").value;
+  const CHAPTER = document.getElementById("chapter").value;
+  const COUNTRY = document.getElementById("country").value;
+  const COMMENT = document.getElementById("comment").value;
 
-  let isValid = true;
+  let IS_VALID = true;
 
-  document.querySelectorAll(".error-message").forEach(message => {
-    message.style.display = "none";
+  document.querySelectorAll(".error-message").forEach(MESSAGE => {
+    MESSAGE.style.display = "none";
   });
-  document.querySelectorAll("input, select, textarea").forEach(input => {
-    input.style.borderColor = "#ccc";
+  document.querySelectorAll("input, select, textarea").forEach(INPUT => {
+    INPUT.style.borderColor = "#ccc";
   });
 
-  if (!name) {
+  if (!NAME) {
     DISPLAY_ERROR("name", "Name is required.");
-    isValid = false;
+    IS_VALID = false;
   }
-  if (!address) {
+  if (!ADDRESS) {
     DISPLAY_ERROR("address", "Address is required.");
-    isValid = false;
+    IS_VALID = false;
   }
-  if (!age || age < 1 || age > 120) {
+  if (!AGE || AGE < 1 || AGE > 120) {
     DISPLAY_ERROR("age", "Please enter a valid age (1-120).");
-    isValid = false;
+    IS_VALID = false;
   }
-  if (!chapter) {
+  if (!CHAPTER) {
     DISPLAY_ERROR("chapter", "Chapter is required.");
-    isValid = false;
+    IS_VALID = false;
   }
-  if (!country) {
+  if (!COUNTRY) {
     DISPLAY_ERROR("country", "Country is required.");
-    isValid = false;
+    IS_VALID = false;
   }
-  if (!comment) {
+  if (!COMMENT) {
     DISPLAY_ERROR("comment", "Comment is required.");
-    isValid = false;
+    IS_VALID = false;
   }
 
-  if (isValid) {
-    let data = JSON.parse(localStorage.getItem("form_data")) || [];
-    data.push({
-      name: name,
-      address: address,
-      age: age,
-      chapter: chapter,
-      country: country,
-      comment: comment
+  if (IS_VALID) {
+    let DATA = JSON.parse(localStorage.getItem("form_data")) || [];
+    DATA.push({
+      name: NAME,
+      address: ADDRESS,
+      age: AGE,
+      chapter: CHAPTER,
+      country: COUNTRY,
+      comment: COMMENT
     });
-    localStorage.setItem("form_data", JSON.stringify(data));
+    localStorage.setItem("form_data", JSON.stringify(DATA));
 
     SHOW_MODAL();
 
@@ -62,26 +62,26 @@ document.getElementById("user-form").addEventListener("submit", function (event)
   }
 });
 
-function DISPLAY_ERROR(fieldId, message) {
-  const errorMessage = document.getElementById(`${fieldId}-error`);
-  const field = document.getElementById(fieldId);
-  errorMessage.textContent = message;
-  errorMessage.style.display = "block";
-  field.style.borderColor = "red";
+function DISPLAY_ERROR(FIELD_ID, MESSAGE) {
+  const ERROR_MESSAGE = document.getElementById(`${FIELD_ID}-error`);
+  const FIELD = document.getElementById(FIELD_ID);
+  ERROR_MESSAGE.textContent = MESSAGE;
+  ERROR_MESSAGE.style.display = "block";
+  FIELD.style.borderColor = "red";
 }
 
 function SHOW_MODAL() {
-  const modal = document.getElementById("modal");
-  modal.style.display = "block";
+  const MODAL = document.getElementById("modal");
+  MODAL.style.display = "block";
 
-  const closeBtn = modal.getElementsByClassName("close")[0];
-  closeBtn.onclick = function () {
-    modal.style.display = "none";
+  const CLOSE_BTN = MODAL.getElementsByClassName("close")[0];
+  CLOSE_BTN.onclick = function () {
+    MODAL.style.display = "none";
   };
 
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
+  window.onclick = function (EVENT) {
+    if (EVENT.target == MODAL) {
+      MODAL.style.display = "none";
     }
   };
 }

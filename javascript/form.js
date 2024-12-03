@@ -1,25 +1,25 @@
-document.getElementById("user-form").addEventListener("submit", function (event) {
-  event.preventDefault();
+document.getElementById("user-form").addEventListener("submit", function (EVENT) {
+  EVENT.preventDefault();
 
-  const name = document.getElementById("name").value;
-  const address = document.getElementById("address").value;
-  const age = document.getElementById("age").value;
-  const chapter = document.getElementById("chapter").value;
-  const country = document.getElementById("country").value;
-  const comment = document.getElementById("comment").value;
+  const NAME = document.getElementById("name").value;
+  const ADDRESS = document.getElementById("address").value;
+  const AGE = document.getElementById("age").value;
+  const CHAPTER = document.getElementById("chapter").value;
+  const COUNTRY = document.getElementById("country").value;
+  const COMMENT = document.getElementById("comment").value;
 
-  let data = JSON.parse(localStorage.getItem("form_data")) || [];
+  let DATA = JSON.parse(localStorage.getItem("form_data")) || [];
 
-  data.push({
-    name: name,
-    address: address,
-    age: age,
-    chapter: chapter,
-    country: country,
-    comment: comment
+  DATA.push({
+    name: NAME,
+    address: ADDRESS,
+    age: AGE,
+    chapter: CHAPTER,
+    country: COUNTRY,
+    comment: COMMENT
   });
 
-  localStorage.setItem("form_data", JSON.stringify(data));
+  localStorage.setItem("form_data", JSON.stringify(DATA));
 
   window.location.href = "view.html";
 });

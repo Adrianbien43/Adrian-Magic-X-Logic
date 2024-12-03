@@ -1,22 +1,22 @@
 window.onload = function () {
-  const urlParams = new URLSearchParams(window.location.search);
-  const index = urlParams.get("index");
+  const url_params = new URLSearchParams(window.location.search);
+  const INDEX = url_params.get("index");
 
-  if (index !== null) {
-    const savedForms = JSON.parse(localStorage.getItem("form_data")) || [];
-    const formData = savedForms[index];
+  if (INDEX !== null) {
+    const SAVED_FORMS = JSON.parse(localStorage.getItem("form_data")) || [];
+    const FORM_DATA = SAVED_FORMS[INDEX];
 
-    document.getElementById("name").value = formData.name;
-    document.getElementById("address").value = formData.address;
-    document.getElementById("age").value = formData.age;
-    document.getElementById("chapter").value = formData.chapter;
-    document.getElementById("country").value = formData.country;
-    document.getElementById("comment").value = formData.comment;
+    document.getElementById("name").value = FORM_DATA.name;
+    document.getElementById("address").value = FORM_DATA.address;
+    document.getElementById("age").value = FORM_DATA.age;
+    document.getElementById("chapter").value = FORM_DATA.chapter;
+    document.getElementById("country").value = FORM_DATA.country;
+    document.getElementById("comment").value = FORM_DATA.comment;
 
-    document.getElementById("edit-form").onsubmit = function (event) {
-      event.preventDefault();
+    document.getElementById("edit-form").onsubmit = function (EVENT) {
+      EVENT.preventDefault();
 
-      const updatedForm = {
+      const UPDATED_FORM = {
         name: document.getElementById("name").value,
         address: document.getElementById("address").value,
         age: document.getElementById("age").value,
@@ -25,7 +25,7 @@ window.onload = function () {
         comment: document.getElementById("comment").value,
       };
 
-      UPDATE_FORM_DATA(updatedForm, index, savedForms);
+      UPDATE_FORM_DATA(UPDATED_FORM, INDEX, SAVED_FORMS);
 
       window.location.href = "view.html";
     };
@@ -34,7 +34,7 @@ window.onload = function () {
   }
 };
 
-function UPDATE_FORM_DATA(updatedForm, index, savedForms) {
-  savedForms[index] = updatedForm;
-  localStorage.setItem("form_data", JSON.stringify(savedForms));
+function UPDATE_FORM_DATA(UPDATED_FORM, INDEX, SAVED_FORMS) {
+  SAVED_FORMS[INDEX] = UPDATED_FORM;
+  localStorage.setItem("form_data", JSON.stringify(SAVED_FORMS));
 }

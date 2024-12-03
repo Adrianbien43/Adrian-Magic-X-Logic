@@ -1,5 +1,6 @@
 var POS = document.documentElement;
-POS.addEventListener('mousemove', e => {
-  POS.style.setProperty('--x', e.clientX + 'px');
-  POS.style.setProperty('--y', e.clientY + 'px');
+
+POS.addEventListener('mousemove', EVENT => {
+  POS.style.setProperty('--x', EVENT.clientX + 'px');
+  POS.style.setProperty('--y', EVENT.clientY + 'px');
 });

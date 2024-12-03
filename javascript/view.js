@@ -1,18 +1,18 @@
 window.onload = function () {
-  const formList = document.getElementById("form-list");
+  const FORM_LIST = document.getElementById("form-list");
 
   let savedForms = JSON.parse(localStorage.getItem("form_data")) || [];
 
   if (savedForms.length === 0) {
-    formList.innerHTML = "<p>No saved forms. Please add a form.</p>";
+    FORM_LIST.innerHTML = "<p>No saved forms. Please add a form.</p>";
     return;
   }
 
   savedForms.forEach((form, index) => {
-    const formItem = document.createElement("div");
-    formItem.classList.add("form-item");
+    const FORM_ITEM = document.createElement("div");
+    FORM_ITEM.classList.add("form-item");
 
-    formItem.innerHTML = `
+    FORM_ITEM.innerHTML = `
           <h3>Form ${index + 1}</h3>
           <div class="form-details">
               <label>Name: </label> <span>${form.name}</span>
@@ -36,7 +36,7 @@ window.onload = function () {
           <button class="delete" onclick="DELETE_FORM(${index})">Delete</button>
       `;
 
-    formList.appendChild(formItem);
+    FORM_LIST.appendChild(FORM_ITEM);
   });
 };
 

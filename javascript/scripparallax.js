@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const iconFire = document.querySelector('#icon-fire');
+  const ICON_FIRE = document.querySelector('#icon-fire');
 
   window.addEventListener('scroll', () => {
-    const scrollTop = window.pageYOffset;
+    const SCROLL_TOP = window.pageYOffset;
 
-    if (iconFire) {
-      iconFire.style.transform = `translateY(${scrollTop * -0.3}px)`;
+    if (ICON_FIRE) {
+      ICON_FIRE.style.transform = `translateY(${SCROLL_TOP * -0.3}px)`;
     }
   });
 });

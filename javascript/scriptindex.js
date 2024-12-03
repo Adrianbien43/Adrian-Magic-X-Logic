@@ -1,41 +1,41 @@
-document.getElementById("registro-form").addEventListener("submit", function (event) {
-  event.preventDefault();
+document.getElementById("registro-form").addEventListener("submit", function (EVENT) {
+  EVENT.preventDefault();
 
   document.getElementById("nombre-error").classList.add("d-none");
   document.getElementById("email-error").classList.add("d-none");
   document.getElementById("password-error").classList.add("d-none");
 
-  const nombre = document.getElementById("nombre-input").value.trim();
-  const email = document.getElementById("email-input").value.trim();
-  const password = document.getElementById("password-input").value.trim();
+  const NOMBRE = document.getElementById("nombre-input").value.trim();
+  const EMAIL = document.getElementById("email-input").value.trim();
+  const PASSWORD = document.getElementById("password-input").value.trim();
 
-  let isValid = true;
+  let isValid = true; // Cambio aquí a isValid en camelCase
 
-  if (nombre === "") {
+  if (NOMBRE === "") {
     document.getElementById("nombre-error").classList.remove("d-none");
-    isValid = false;
+    isValid = false; // También en camelCase
   }
 
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (email === "") {
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (EMAIL === "") {
     document.getElementById("email-error").textContent = "El correo electrónico es obligatorio.";
     document.getElementById("email-error").classList.remove("d-none");
-    isValid = false;
-  } else if (!emailRegex.test(email)) {
+    isValid = false; // También en camelCase
+  } else if (!EMAIL_REGEX.test(EMAIL)) {
     document.getElementById("email-error").textContent = "Introduce un correo electrónico válido.";
     document.getElementById("email-error").classList.remove("d-none");
-    isValid = false;
+    isValid = false; // También en camelCase
   }
 
   // Validar contraseña
-  if (password === "") {
+  if (PASSWORD === "") {
     document.getElementById("password-error").textContent = "La contraseña es obligatoria.";
     document.getElementById("password-error").classList.remove("d-none");
-    isValid = false;
-  } else if (password.length < 6) {
+    isValid = false; // También en camelCase
+  } else if (PASSWORD.length < 6) {
     document.getElementById("password-error").textContent = "La contraseña debe tener al menos 6 caracteres.";
     document.getElementById("password-error").classList.remove("d-none");
-    isValid = false;
+    isValid = false; // También en camelCase
   }
 
   if (isValid) {
