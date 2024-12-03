@@ -157,25 +157,38 @@
 }
 
 @media (max-width: 620px) {
+
+  footer .footer-container .footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
   .footer-container {
     background: black;
     padding: 15px 8px 5px;
   }
 
   .social-icons {
-    gap: 4px;
+    gap: 10px;
   }
 
   .social-icons a {
     padding: 3px;
   }
 
+  .social-icons a:hover {
+    background-color: #ff0000;
+  }
+
   .social-icons a i {
-    font-size: 0.7em;
+    font-size: 0.9em;
   }
 
   .footer-nav ul {
-    gap: 4px;
+    flex-direction: row;
+    gap: 10px;
   }
 
   .footer-nav ul li a {
@@ -187,6 +200,7 @@
   }
 
   .designer {
-    font-size: 0.5em;
+    font-size: 0.7em;
+    color: #00d9ff;
   }
 }

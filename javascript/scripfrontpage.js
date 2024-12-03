@@ -1,4 +1,4 @@
-function toggleMenu() {
-  const NAV_MENU = document.getElementById('nav-menu');
-  NAV_MENU.classList.toggle('show');
+function TOGGLE_MENU() {
+  const navMenu = document.getElementById('nav-menu');
+  navMenu.classList.toggle('show');
 }

@@ -1,68 +1,87 @@
-document.getElementById("user-form").addEventListener("submit", function (EVENT) {
-  EVENT.preventDefault();
+document.getElementById("user-form").addEventListener("submit", function (event) {
+  event.preventDefault();
 
-  const NAME = document.getElementById("name").value;
-  const ADDRESS = document.getElementById("address").value;
-  const AGE = document.getElementById("age").value;
-  const CHAPTER = document.getElementById("chapter").value;
-  const COUNTRY = document.getElementById("country").value;
-  const COMMENT = document.getElementById("comment").value;
+  const name = document.getElementById("name").value;
+  const address = document.getElementById("address").value;
+  const age = document.getElementById("age").value;
+  const chapter = document.getElementById("chapter").value;
+  const country = document.getElementById("country").value;
+  const comment = document.getElementById("comment").value;
 
-  let VALID = true;
+  let isValid = true;
 
-  document.querySelectorAll(".error-message").forEach(MESSAGE => {
-    MESSAGE.style.display = "none";
+  document.querySelectorAll(".error-message").forEach(message => {
+    message.style.display = "none";
   });
-  document.querySelectorAll("input, select, textarea").forEach(INPUT => {
-    INPUT.style.borderColor = "#ccc";
+  document.querySelectorAll("input, select, textarea").forEach(input => {
+    input.style.borderColor = "#ccc";
   });
 
-  if (!NAME) {
+  if (!name) {
     DISPLAY_ERROR("name", "Name is required.");
-    VALID = false;
+    isValid = false;
   }
-  if (!ADDRESS) {
+  if (!address) {
     DISPLAY_ERROR("address", "Address is required.");
-    VALID = false;
+    isValid = false;
   }
-  if (!AGE || AGE < 1 || AGE > 120) {
+  if (!age || age < 1 || age > 120) {
     DISPLAY_ERROR("age", "Please enter a valid age (1-120).");
-    VALID = false;
+    isValid = false;
   }
-  if (!CHAPTER) {
+  if (!chapter) {
     DISPLAY_ERROR("chapter", "Chapter is required.");
-    VALID = false;
+    isValid = false;
   }
-  if (!COUNTRY) {
+  if (!country) {
     DISPLAY_ERROR("country", "Country is required.");
-    VALID = false;
+    isValid = false;
   }
-  if (!COMMENT) {
+  if (!comment) {
     DISPLAY_ERROR("comment", "Comment is required.");
-    VALID = false;
+    isValid = false;
   }
 
-  if (VALID) {
-    let DATA = JSON.parse(localStorage.getItem("form_data")) || [];
-    DATA.push({
-      name: NAME,
-      address: ADDRESS,
-      age: AGE,
-      chapter: CHAPTER,
-      country: COUNTRY,
-      comment: COMMENT
+  if (isValid) {
+    let data = JSON.parse(localStorage.getItem("form_data")) || [];
+    data.push({
+      name: name,
+      address: address,
+      age: age,
+      chapter: chapter,
+      country: country,
+      comment: comment
     });
-    localStorage.setItem("form_data", JSON.stringify(DATA));
+    localStorage.setItem("form_data", JSON.stringify(data));
 
-    alert("Form submitted successfully!");
-    window.location.href = "view.html";
+    SHOW_MODAL();
+
+    setTimeout(function () {
+      window.location.href = "view.html";
+    }, 1500);
   }
 });
 
-function DISPLAY_ERROR(FIELD_ID, MESSAGE) {
-  const ERROR_MESSAGE = document.getElementById(`${FIELD_ID}-error`);
-  const FIELD = document.getElementById(FIELD_ID);
-  ERROR_MESSAGE.textContent = MESSAGE;
-  ERROR_MESSAGE.style.display = "block";
-  FIELD.style.borderColor = "red";
+function DISPLAY_ERROR(fieldId, message) {
+  const errorMessage = document.getElementById(`${fieldId}-error`);
+  const field = document.getElementById(fieldId);
+  errorMessage.textContent = message;
+  errorMessage.style.display = "block";
+  field.style.borderColor = "red";
+}
+
+function SHOW_MODAL() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "block";
+
+  const closeBtn = modal.getElementsByClassName("close")[0];
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
 }

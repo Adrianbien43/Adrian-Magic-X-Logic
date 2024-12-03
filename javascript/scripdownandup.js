@@ -1,16 +1,15 @@
-function updateProgressBar() {
-  // Obtener el contenedor del contenido
-  const CONTENT = document.documentElement;
-  const SCROLL_TOP = CONTENT.scrollTop;
-  const SCROLL_HEIGHT = CONTENT.scrollHeight;
-  const CLIENT_HEIGHT = CONTENT.clientHeight;
+function UPDATE_PROGRESS_BAR() {
+  const content = document.documentElement;
+  const scrollTop = content.scrollTop;
+  const scrollHeight = content.scrollHeight;
+  const clientHeight = content.clientHeight;
 
-  const SCROLL_PERCENTAGE = (SCROLL_TOP / (SCROLL_HEIGHT - CLIENT_HEIGHT)) * 100;
+  const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 100;
 
-  const PROGRESSBAR = document.getElementById('progressbar');
-  PROGRESSBAR.style.height = SCROLL_PERCENTAGE + '%';
+  const progressBar = document.getElementById('progressbar');
+  progressBar.style.height = scrollPercentage + '%';
 }
 
-window.addEventListener('scroll', updateProgressBar);
+window.addEventListener('scroll', UPDATE_PROGRESS_BAR);
 
-updateProgressBar();
+UPDATE_PROGRESS_BAR();

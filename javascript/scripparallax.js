@@ -1,6 +1,11 @@
-window.addEventListener('scroll', function () {
-  let SCROLL_POSITION = window.scrollY;
+document.addEventListener('DOMContentLoaded', () => {
+  const iconFire = document.querySelector('#icon-fire');
 
-  document.querySelector('.img-background-1 img').style.transform = 'translateY(' + (SCROLL_POSITION * 0.6) + 'px)';
-  document.querySelector('.img-background-2 img').style.transform = 'translateY(' + (SCROLL_POSITION * 0.4) + 'px)';
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.pageYOffset;
+
+    if (iconFire) {
+      iconFire.style.transform = `translateY(${scrollTop * -0.3}px)`;
+    }
+  });
 });

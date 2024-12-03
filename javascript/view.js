@@ -1,52 +1,52 @@
 window.onload = function () {
-  const FORM_LIST = document.getElementById("form-list");
+  const formList = document.getElementById("form-list");
 
-  let SAVED_FORMS = JSON.parse(localStorage.getItem("form_data")) || [];
+  let savedForms = JSON.parse(localStorage.getItem("form_data")) || [];
 
-  if (SAVED_FORMS.length === 0) {
-    FORM_LIST.innerHTML = "<p>No saved forms. Please add a form.</p>";
+  if (savedForms.length === 0) {
+    formList.innerHTML = "<p>No saved forms. Please add a form.</p>";
     return;
   }
 
-  SAVED_FORMS.forEach((FORM, INDEX) => {
-    const FORM_ITEM = document.createElement("div");
-    FORM_ITEM.classList.add("form-item");
+  savedForms.forEach((form, index) => {
+    const formItem = document.createElement("div");
+    formItem.classList.add("form-item");
 
-    FORM_ITEM.innerHTML = `
-          <h3>Form ${INDEX + 1}</h3>
+    formItem.innerHTML = `
+          <h3>Form ${index + 1}</h3>
           <div class="form-details">
-              <label>Name: </label> <span>${FORM.name}</span>
+              <label>Name: </label> <span>${form.name}</span>
           </div>
           <div class="form-details">
-              <label>Address: </label> <span>${FORM.address}</span>
+              <label>Address: </label> <span>${form.address}</span>
           </div>
           <div class="form-details">
-              <label>Age: </label> <span>${FORM.age}</span>
+              <label>Age: </label> <span>${form.age}</span>
           </div>
           <div class="form-details">
-              <label>Chapter: </label> <span>${FORM.chapter}</span>
+              <label>Chapter: </label> <span>${form.chapter}</span>
           </div>
           <div class="form-details">
-              <label>Country: </label> <span>${FORM.country}</span>
+              <label>Country: </label> <span>${form.country}</span>
           </div>
           <div class="form-details">
-              <label>Comment: </label> <span>${FORM.comment}</span>
+              <label>Comment: </label> <span>${form.comment}</span>
           </div>
-          <button class="edit" onclick="editForm(${INDEX})">Edit</button>
-          <button class="delete" onclick="deleteForm(${INDEX})">Delete</button>
+          <button class="edit" onclick="EDIT_FORM(${index})">Edit</button>
+          <button class="delete" onclick="DELETE_FORM(${index})">Delete</button>
       `;
 
-    FORM_LIST.appendChild(FORM_ITEM);
+    formList.appendChild(formItem);
   });
 };
 
-function editForm(INDEX) {
-  window.location.href = `edit.html?index=${INDEX}`;
+function EDIT_FORM(index) {
+  window.location.href = `edit.html?index=${index}`;
 }
 
-function deleteForm(INDEX) {
-  let SAVED_FORMS = JSON.parse(localStorage.getItem("form_data")) || [];
-  SAVED_FORMS.splice(INDEX, 1);
-  localStorage.setItem("form_data", JSON.stringify(SAVED_FORMS));
+function DELETE_FORM(index) {
+  let savedForms = JSON.parse(localStorage.getItem("form_data")) || [];
+  savedForms.splice(index, 1);
+  localStorage.setItem("form_data", JSON.stringify(savedForms));
   window.location.reload();
 }
