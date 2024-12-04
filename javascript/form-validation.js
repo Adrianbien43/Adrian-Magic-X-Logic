@@ -1,6 +1,16 @@
-document.getElementById("user-form").addEventListener("submit", function (EVENT) {
-  EVENT.preventDefault();
+document.getElementById("user-form").addEventListener("submit", function (event) {
+  event.preventDefault();
 
+  // Ocultar los mensajes de error
+  document.querySelectorAll(".error-message").forEach(message => {
+    message.style.display = "none";
+  });
+
+  document.querySelectorAll("input, select, textarea").forEach(input => {
+    input.style.borderColor = "#ccc";
+  });
+
+  // Constantes en mayúsculas
   const NAME = document.getElementById("name").value;
   const ADDRESS = document.getElementById("address").value;
   const AGE = document.getElementById("age").value;
@@ -8,41 +18,34 @@ document.getElementById("user-form").addEventListener("submit", function (EVENT)
   const COUNTRY = document.getElementById("country").value;
   const COMMENT = document.getElementById("comment").value;
 
-  let IS_VALID = true;
-
-  document.querySelectorAll(".error-message").forEach(MESSAGE => {
-    MESSAGE.style.display = "none";
-  });
-  document.querySelectorAll("input, select, textarea").forEach(INPUT => {
-    INPUT.style.borderColor = "#ccc";
-  });
+  let isValid = true; // Variable en camelCase
 
   if (!NAME) {
-    DISPLAY_ERROR("name", "Name is required.");
-    IS_VALID = false;
+    DisplayError("name", "Name is required.");
+    isValid = false;
   }
   if (!ADDRESS) {
-    DISPLAY_ERROR("address", "Address is required.");
-    IS_VALID = false;
+    DisplayError("address", "Address is required.");
+    isValid = false;
   }
   if (!AGE || AGE < 1 || AGE > 120) {
-    DISPLAY_ERROR("age", "Please enter a valid age (1-120).");
-    IS_VALID = false;
+    DisplayError("age", "Please enter a valid age (1-120).");
+    isValid = false;
   }
   if (!CHAPTER) {
-    DISPLAY_ERROR("chapter", "Chapter is required.");
-    IS_VALID = false;
+    DisplayError("chapter", "Chapter is required.");
+    isValid = false;
   }
   if (!COUNTRY) {
-    DISPLAY_ERROR("country", "Country is required.");
-    IS_VALID = false;
+    DisplayError("country", "Country is required.");
+    isValid = false;
   }
   if (!COMMENT) {
-    DISPLAY_ERROR("comment", "Comment is required.");
-    IS_VALID = false;
+    DisplayError("comment", "Comment is required.");
+    isValid = false;
   }
 
-  if (IS_VALID) {
+  if (isValid) {
     let DATA = JSON.parse(localStorage.getItem("form_data")) || [];
     DATA.push({
       name: NAME,
@@ -54,7 +57,7 @@ document.getElementById("user-form").addEventListener("submit", function (EVENT)
     });
     localStorage.setItem("form_data", JSON.stringify(DATA));
 
-    SHOW_MODAL();
+    ShowModal();
 
     setTimeout(function () {
       window.location.href = "view.html";
@@ -62,26 +65,27 @@ document.getElementById("user-form").addEventListener("submit", function (EVENT)
   }
 });
 
-function DISPLAY_ERROR(FIELD_ID, MESSAGE) {
-  const ERROR_MESSAGE = document.getElementById(`${FIELD_ID}-error`);
-  const FIELD = document.getElementById(FIELD_ID);
-  ERROR_MESSAGE.textContent = MESSAGE;
-  ERROR_MESSAGE.style.display = "block";
-  FIELD.style.borderColor = "red";
+// Funciones en camelCase
+function DisplayError(fieldId, message) {
+  const errorMessage = document.getElementById(`${fieldId}-error`);
+  const field = document.getElementById(fieldId);
+  errorMessage.textContent = message;
+  errorMessage.style.display = "block";
+  field.style.borderColor = "red";
 }
 
-function SHOW_MODAL() {
-  const MODAL = document.getElementById("modal");
-  MODAL.style.display = "block";
+function ShowModal() {
+  const modal = document.getElementById("modal");
+  modal.style.display = "block";
 
-  const CLOSE_BTN = MODAL.getElementsByClassName("close")[0];
-  CLOSE_BTN.onclick = function () {
-    MODAL.style.display = "none";
+  const closeBtn = modal.getElementsByClassName("close")[0];
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
   };
 
-  window.onclick = function (EVENT) {
-    if (EVENT.target == MODAL) {
-      MODAL.style.display = "none";
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
     }
   };
 }

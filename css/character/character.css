@@ -75,61 +75,15 @@ nav a {
 /*--------------------------------------------*/
 
 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
   background: linear-gradient(180deg, #000000, #ffffff, #000000);
-}
-
-.gallery-001 {
-  display: grid;
-  gap: 20px;
-  grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  max-width: 100%;
-  margin: 8%;
-}
-
-.painting-001 {
-  background: linear-gradient(to bottom right, #001f33, #003366, #004080, #006699);
-  border: 2px solid #242424;
-  border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 4px 15px black;
-  transition: transform 0.2s;
-  z-index: 1;
 }
 
-.painting-001:hover {
-  box-shadow: 0 0 20px rgba(1, 151, 252, 0.7);
-  transform: scale(1.03);
-}
-
-.paint-001 img {
-  width: 100%;
-  height: 500px;
-  object-fit: cover;
-}
-
-.info-001 {
-  display: grid;
-  place-items: center;
-  margin: 3%;
-}
-
-.text-001 h2 {
-  text-align: center;
-  font-size: 1.5em;
-  margin: 0 0 10px;
-  color: #f0f8ff;
-  font-family: 'Garamond', serif;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7);
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 5px;
-}
-
-.text-001 p {
-  text-align: justify;
-  font-size: 1em;
-  color: #000000;
-}
 
 /*-------------------------------------------------------*/
 
