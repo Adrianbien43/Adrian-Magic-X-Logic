@@ -137,7 +137,6 @@ section:first-of-type p {
 .box-area {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  /* Ajuste del tamaño de las columnas */
   gap: 40px;
   margin-top: 50px;
 }
@@ -158,11 +157,9 @@ section:first-of-type p {
   border-radius: 10px;
   display: block;
   transition: transform 0.5s ease-in-out;
-  /* Transición más suave */
 }
 
 .overplay {
-  /* Usando "overplay" en lugar de "overlay" */
   height: 0;
   width: 100%;
   background: linear-gradient(transparent, #1c1c1c 58%);
@@ -179,11 +176,9 @@ section:first-of-type p {
   text-align: center;
   font-size: 14px;
   transition: height 0.5s ease-in-out;
-  /* Transición de altura */
 }
 
 .overplay h3 {
-  /* Usando "overplay" en lugar de "overlay" */
   font-weight: 500;
   margin-bottom: 5px;
   margin-top: 80%;
@@ -199,11 +194,8 @@ section:first-of-type p {
 
 .box:hover img {
   transform: scale(1.1);
-  /* Aumentar imagen al pasar el ratón */
 }
 
 .box:hover .overplay {
-  /* Usando "overplay" en lugar de "overlay" */
   height: 100%;
-  /* Mostrar overlay al hacer hover */
 }
