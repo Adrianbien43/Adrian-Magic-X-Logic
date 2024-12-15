@@ -5,6 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chat en Tiempo Real</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/index/styles.css">
+
 </head>
 
 <body>
@@ -24,6 +27,8 @@
     </nav>
 
   </header>
+
+
   <header class="header-mobile">
     <a href="#">
       <h1>M-X-L</h1>
@@ -38,17 +43,42 @@
       </ul>
     </nav>
   </header>
+  <main>
+
+    <div class="chat-container">
+      <h2>Chat en Tiempo Real</h2>
+
+      <ul id="message-list"></ul>
+
+      <input type="text" id="username-input" placeholder="Tu nombre">
+      <input type="text" id="message-input" placeholder="Escribe un mensaje...">
+      <button id="send-button">Enviar</button>
+    </div>
+
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div class="social-icons">
+        <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+        <a href=""><i class="fa-brands fa-square-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
+        <a href=""><i class="fa-brands fa-youtube"></i></a>
+      </div>
+      <div class="footer-nav">
+        <ul>
+          <li><a href="">Casa</a></li>
+          <li><a href="">Noticias</a></li>
+          <li><a href="">Contacta</a></li>
+          <li><a href="">Tienda</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© &copy;2024 M-X-L Todos los derechos reservados<span class="designer">Adrián</span></p>
+    </div>
+  </footer>
 
 
-  <div class="chat-container">
-    <h2>Chat en Tiempo Real</h2>
-
-    <ul id="message-list"></ul>
-
-    <input type="text" id="username-input" placeholder="Tu nombre">
-    <input type="text" id="message-input" placeholder="Escribe un mensaje...">
-    <button id="send-button">Enviar</button>
-  </div>
 
   <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"></script>
