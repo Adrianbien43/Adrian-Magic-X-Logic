@@ -1,0 +1,131 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  /* Gris muy claro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Contenedor principal del chat */
+.chat-container {
+  background-color: white;
+  /* Fondo blanco para el chat */
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Sombra suave */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Lista de mensajes */
+.message-list {
+  list-style: none;
+  padding: 20px;
+  overflow-y: auto;
+  flex-grow: 1;
+  max-height: 400px;
+}
+
+.message-list li {
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  background-color: #e0e0e0;
+  /* Gris claro para los mensajes */
+  word-wrap: break-word;
+  max-width: 80%;
+  font-size: 14px;
+}
+
+.message-list li strong {
+  font-weight: bold;
+  color: #333;
+  /* Gris oscuro para el nombre */
+}
+
+/* Estilo para los mensajes del usuario */
+.message-list li.user {
+  background-color: #d3d3d3;
+  /* Gris ligeramente más oscuro */
+  align-self: flex-start;
+}
+
+/* Estilo para los mensajes del bot */
+.message-list li.bot {
+  background-color: #b0b0b0;
+  /* Gris aún más oscuro */
+  align-self: flex-end;
+}
+
+/* Contenedor de la entrada de mensajes */
+.message-input-container {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fafafa;
+  /* Gris muy claro para el fondo */
+  border-top: 1px solid #ddd;
+  /* Borde gris suave en la parte superior */
+}
+
+.message-input {
+  width: 70%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  /* Gris suave para el borde */
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f7f7f7;
+  /* Gris muy suave para el fondo */
+  color: #333;
+  /* Texto en gris oscuro */
+}
+
+.message-input:focus {
+  border-color: #999;
+  /* Borde más oscuro cuando el input está seleccionado */
+  outline: none;
+}
+
+/* Estilo para el botón de enviar */
+.send-button {
+  background-color: #757575;
+  /* Gris medio */
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.send-button:hover {
+  background-color: #616161;
+  /* Gris más oscuro cuando el cursor pasa sobre el botón */
+}
+
+/* Estilo para el input de nombre de usuario */
+#username-input {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+#username-input:focus {
+  border-color: #999;
+  outline: none;
+}
