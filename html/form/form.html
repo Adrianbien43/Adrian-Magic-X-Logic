@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>M-X-L Formulario</title>
+  <title>M-X-L Form</title>
   <link rel="stylesheet" href="../../css/form/styles.css">
   <link rel="stylesheet" href="../../css/form/form.css">
   <link rel="stylesheet" href="../../css/form/form1.css">
@@ -13,14 +13,11 @@
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-
-
 </head>
 
 <body>
 
   <header>
-
     <div class="heading-title">
       <a href="../../index.html">
         <h1>Magic X Logic</h1>
@@ -29,12 +26,12 @@
 
     <nav>
       <a href="../information/information.html">INFO</a>
-      <a href="../stories/stories.html">HISTORIAS</a>
-      <a href="../characters/characters.html">PERSONAJES</a>
-      <a href="#">AYUDAS</a>
+      <a href="../stories/stories.html">STORIES</a>
+      <a href="../characters/characters.html">CHARACTERS</a>
+      <a href="#">SUPPORT</a>
     </nav>
-
   </header>
+
   <header class="header-mobile">
     <a href="../../index.html">
       <h1>M-X-L</h1>
@@ -43,70 +40,64 @@
     <nav>
       <ul id="nav-menu">
         <li><a href="../information/information.html">INFO</a></li>
-        <li><a href="../stories/stories.html">HISTORIAS</a></li>
-        <li><a href="../characters/characters.html">PERSONAJES</a></li>
-        <li><a href="#">AYUDAS</a></li>
+        <li><a href="../stories/stories.html">STORIES</a></li>
+        <li><a href="../characters/characters.html">CHARACTERS</a></li>
+        <li><a href="#">SUPPORT</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
     <div class="form-container">
-      <h1>Tu opinión cuenta</h1>
+      <h1>Your Opinion Matters</h1>
       <form id="user-form">
         <div class="form-group">
-          <label for="name">Nombre:</label>
+          <label for="name">Name:</label>
           <input type="text" id="name" name="name">
-          <p id="name-error" class="error-message" style="display: none;">Es importante tu nombre.</p>
+          <p id="name-error" class="error-message" style="display: none;">Your name is important.</p>
         </div>
         <div class="form-group">
-          <label for="address">Dirección:</label>
+          <label for="address">Address:</label>
           <input type="text" id="address" name="address">
-          <p id="address-error" class="error-message" style="display: none;">Es importante tu dirección.</p>
+          <p id="address-error" class="error-message" style="display: none;">Your address is important.</p>
         </div>
         <div class="form-group">
-          <label for="age">Edad:</label>
+          <label for="age">Age:</label>
           <input type="number" id="age" name="age">
-          <p id="age-error" class="error-message" style="display: none;">Ingrese una edad válidad (1-120).</p>
+          <p id="age-error" class="error-message" style="display: none;">Enter a valid age (1–120).</p>
         </div>
         <div class="form-group">
-          <label for="chapter">Capítulo:</label>
+          <label for="chapter">Chapter:</label>
           <select id="chapter" name="chapter">
-            <option value="">Seleccione un capítulo</option>
-            <option value="Chapter 1">Capítulo 1</option>
-            <option value="Chapter 2">Capítulo 2</option>
-            <option value="Chapter 3">Capítulo 3</option>
+            <option value="">Select a chapter</option>
+            <option value="Chapter 1">Chapter 1</option>
+            <option value="Chapter 2">Chapter 2</option>
+            <option value="Chapter 3">Chapter 3</option>
           </select>
-          <p id="chapter-error" class="error-message" style="display: none;">El capítulo es obligatorio.</p>
+          <p id="chapter-error" class="error-message" style="display: none;">Chapter selection is required.</p>
         </div>
         <div class="form-group">
-          <label for="country">País:</label>
+          <label for="country">Country:</label>
           <input type="text" id="country" name="country">
-          <p id="country-error" class="error-message" style="display: none;">El país es obligatorio.</p>
+          <p id="country-error" class="error-message" style="display: none;">Country is required.</p>
         </div>
         <div class="form-group">
-          <label for="comment">Comentario:</label>
+          <label for="comment">Comment:</label>
           <textarea id="comment" name="comment"></textarea>
-          <p id="comment-error" class="error-message" style="display: none;">Estoy interesado en tu opinión.</p>
+          <p id="comment-error" class="error-message" style="display: none;">I'm interested in your opinion.</p>
         </div>
-        <button type="submit">INVIAR</button>
+        <button type="submit">SUBMIT</button>
       </form>
     </div>
-
 
     <!-- Modal -->
     <div id="modal" class="modal">
       <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Formulario enviado con éxito.</p>
+        <p>Form submitted successfully.</p>
       </div>
     </div>
-
   </main>
-
-
-
-
 
   <footer>
     <div class="footer-container">
@@ -118,23 +109,23 @@
       </div>
       <div class="footer-nav">
         <ul>
-          <li><a href="">Casa</a></li>
-          <li><a href="">Noticias</a></li>
-          <li><a href="">Contacta</a></li>
-          <li><a href="">Tienda</a></li>
+          <li><a href="">Home</a></li>
+          <li><a href="">News</a></li>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Store</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© &copy;2024 M-X-L Todos los derechos reservados<span class="designer">Adrián</span></p>
+      <p>© 2024 M-X-L All rights reserved <span class="designer">Adrián</span></p>
     </div>
   </footer>
 
   <script src="../../javascript/scripfrontpage.js"></script>
   <script src="../../javascript/scripdownandup.js"></script>
   <script src="../../javascript/scriptindex.js"></script>
-
   <script src="../../javascript/form-validation.js"></script>
+
 </body>
 
 </html>
